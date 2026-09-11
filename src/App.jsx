@@ -104,7 +104,105 @@ const ENTRY_POINTS = [
 */
 const BLOG_POSTS = [
   {
-    id: "signs-you-have-mice",
+      {
+    id: "dangers-of-mice-home-workplace",
+    title: "The Dangers of Mice in the Home or Workplace",
+    date: "September 2026",
+    excerpt: "Mice bring health risks, property damage, and stress the moment they slip inside. Sealing every entry point stops the problem at its source.",
+    body: `The dangers of mice in the home or workplace start long before anyone spots a mouse. A single opening the size of a dime lets them slip past your defenses. Once inside, mice bring health risks, property damage, and a mess that spreads fast. Sealing every entry point is the only way to stop the problem at its source.
+
+Why Mice Move Indoors
+
+Mice do not wait for winter to search for shelter. Cooler nights and shrinking food sources push them toward buildings year-round. A crack near the foundation or a gap around a utility line looks like an invitation.
+
+Once a mouse finds a way in, it rarely leaves on its own. It builds a nest, finds a food source, and starts reproducing within weeks. What starts as one mouse can become a dozen in a single season.
+
+Homes and workplaces both offer exactly what mice look for. Warmth, food scraps, and quiet corners make ideal shelter. The building does not need to be dirty to attract them; it only needs an opening.
+
+Common Entry Points You Might Be Missing
+
+Most homeowners assume their exterior is solid until proven otherwise. In reality, mice exploit spots most people never think to check. Foundation vents, sill plates, and utility penetrations rank among the worst offenders.
+
+Dryer vents and roofline gaps are just as common. A gap around a cable line or a torn vent screen looks tiny to a person. To a mouse, it is a clear path indoors.
+
+Garage doors deserve attention too. The rubber seal along the bottom wears down over time, leaving a low gap. Mice notice that gap long before any homeowner does.
+
+Health Risks You Cannot Ignore
+
+Mice carry more than a bad reputation. Their droppings and urine can trigger asthma and allergic reactions, especially in children. Hantavirus, salmonella, and leptospirosis are all linked to rodent exposure.
+
+These risks do not stay contained to one room. Mice travel across counters, shelves, and storage areas, spreading contamination as they move. In a workplace, that spread can affect an entire team, not just one desk.
+
+Employees and family members should not have to wonder what a mouse touched overnight. The dangers of mice extend well past a single sighting. Every surface they cross becomes a question mark.
+
+Food storage areas carry the highest risk. A kitchen, break room, or pantry gives mice both shelter and a reason to stay. Once they associate a space with food, they keep coming back.
+
+Property and Structural Damage
+
+Mice gnaw constantly to keep their teeth from overgrowing. Wiring, insulation, drywall, and wood framing all become targets. Chewed wiring is not just costly; it is a genuine fire hazard.
+
+Insurance companies rarely cover rodent damage, which leaves the full cost on the property owner. Repairs can stretch from a quick patch to a full wall replacement. The longer mice stay, the more expensive the fix becomes.
+
+Insulation damage is easy to overlook until a heating bill spikes. Nesting material packed into walls reduces efficiency across an entire building. What starts as a hidden problem eventually shows up on paper.
+
+Why Traps and Bait Only Treat the Symptom
+
+Traps and bait stations can reduce the mice already inside a space. They do nothing to stop the next one from finding the same opening. That is the core weakness of a chemical-only approach.
+
+New mice will keep testing the same gaps, vents, and cracks. Without sealing those entry points, the cycle repeats every season. A property can end up fighting the same battle year after year.
+
+Chemical treatments also carry their own downsides. Homes with pets or young children face added risk from bait placement. A structural fix removes that concern entirely.
+
+Sealing the Space Solves the Root Problem
+
+Exclusion work closes the actual paths mice use to come inside. Steel mesh, sealant, and flashing handle the areas traps and bait cannot touch. Once those openings close, there is nothing left for a new mouse to find.
+
+This approach treats the building itself as the solution. Instead of managing an ongoing population, the goal becomes prevention. A sealed exterior removes the invitation altogether.
+
+At Pest Seal, this is the entire focus of our work. We walk the full exterior of a home or workplace, inside and out. Every vent, sill gap, and utility penetration becomes part of the inspection.
+
+We do not rely on chemicals or long-term contracts to keep results in place. A properly sealed structure does the work on its own. That is the difference between managing a problem and actually solving it.
+
+The Cost of Waiting
+
+Every week a gap stays open is another chance for mice to move in. What looks like a minor crack today can become an active nest within a month. Early action costs far less than a full infestation later.
+
+Business owners face an added risk: reputation. A single sighting in a workplace can shake employee trust or customer confidence fast. The dangers of mice are not only physical; they carry a real cost to a business's standing too.
+
+Restaurants, warehouses, and offices all face inspections and reviews. A rodent sighting reported publicly can undo years of good standing in a single afternoon. Prevention costs far less than repairing that kind of damage.
+
+What a Thorough Seal Actually Looks Like
+
+A proper exclusion visit does not stop at the obvious gaps. Technicians check foundation lines, roof edges, dryer vents, and pipe penetrations. Even small openings around utility lines deserve close attention.
+
+Materials matter as much as the inspection itself. Steel mesh resists gnawing in ways that foam or caulk alone cannot. Flashing and sealant then lock everything in place against weather and wear.
+
+This is not a one-time spray or a short-term fix. It is a structural change that keeps working long after the visit ends. No chemicals, no ongoing contract, just a building that mice cannot access.
+
+Every property is different, which is why a walk-through matters more than a checklist. Older homes often hide more gaps than newer construction. Commercial buildings bring their own set of utility penetrations and loading areas to examine.
+
+Protecting the People Who Live and Work There
+
+Every seal completed removes a source of stress for the people inside. Families stop worrying about scratching in the walls at night. Employees stop wondering what might be behind the break room cabinets.
+
+Peace of mind matters as much as the physical fix. A building free of rodent activity feels different to everyone inside it. That shift is often the most noticeable result of the work.
+
+The dangers of mice in the home or workplace are real, but they are also preventable. A sealed structure keeps rodents out before they ever become a problem worth noticing. That is the whole idea behind sealing them out and keeping them out.
+
+When Prevention Makes the Most Sense
+
+Fall and early winter tend to bring the highest demand for exclusion work. Outdoor temperatures drop, and mice shift their focus from food to shelter fast. A home or workplace that stays warm and dry becomes an obvious target.
+
+Acting before that seasonal shift saves both time and money. Sealing gaps in late summer keeps the fall rush from ever becoming a problem. Waiting until scratching sounds start almost always costs more in the end.
+
+A Simple Standard: No Chemicals, No Contracts
+
+Pest Seal was built around a straightforward idea. Find every way rodents enter a structure, then close it for good. No bait stations to maintain and no recurring service required afterward.
+
+That standard keeps homes and workplaces safer for everyone inside them. Families avoid chemicals near kids and pets. Businesses avoid the liability that comes with ongoing rodent treatments.
+
+A free inspection is the easiest first step toward solving the problem. A technician walks the exterior, identifies every risk point, and lays out a clear plan. From there, sealing the space becomes a one-time, lasting fix.`,
+  },    id: "signs-you-have-mice",
     title: "5 signs mice have already gotten in",
     date: "September 2026",
     excerpt: "Most homeowners don't see a mouse before they see the evidence. Here's what to look for.",
