@@ -104,7 +104,6 @@ const ENTRY_POINTS = [
 */
 const BLOG_POSTS = [
   {
-      {
     id: "dangers-of-mice-home-workplace",
     title: "The Dangers of Mice in the Home or Workplace",
     date: "September 2026",
