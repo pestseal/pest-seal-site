@@ -103,7 +103,7 @@ const ENTRY_POINTS = [
   Newest posts should go at the top. "date" is any text you want shown.
 */
 const BLOG_POSTS = [ 
-{id: "dangers-of-mice-home-workplace",    title: "The Dangers of Mice in the Home or Workplace",    date: "September 2026",
+  id: "dangers-of-mice-home-workplace",    title: "The Dangers of Mice in the Home or Workplace",    date: "September 2026",
     excerpt: "Mice bring health risks, property damage, and stress the moment they slip inside. Sealing every entry point stops the problem at its source.",
     body: `The dangers of mice in the home or workplace start long before anyone spots a mouse. A single opening the size of a dime lets them slip past your defenses. Once inside, mice bring health risks, property damage, and a mess that spreads fast. Sealing every entry point is the only way to stop the problem at its source.
 
