@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Link, useParams, Navigate } from "react-router-dom";
 import { Phone, Mail, Shield, Home as HomeIcon, MapPin, CheckCircle2, Wrench, Building2, ArrowLeftCircle } from "lucide-react";
 
 const COLORS = {
@@ -97,6 +98,48 @@ const ENTRY_POINTS = [
   { label: "Garage door corners", icon: Building2 },
 ];
 
+/*
+  To add a new blog post, just add another object to this list.
+  Newest posts should go at the top. "date" is any text you want shown.
+*/
+const BLOG_POSTS = [
+  {
+    id: "signs-you-have-mice",
+    title: "5 signs mice have already gotten in",
+    date: "September 2026",
+    excerpt: "Most homeowners don't see a mouse before they see the evidence. Here's what to look for.",
+    body: `You're far more likely to hear or find evidence of mice before you ever spot one. A few things worth checking:
+
+Scratching sounds in walls or the attic, especially at night, are one of the most common first signs. Small dark droppings near food storage, under sinks, or along baseboards are another. A stale, musky odor in an enclosed space like a closet or cabinet can mean an active nest nearby.
+
+Look closely at boxes, insulation, or fabric for shredded material used as nesting. And check the edges of cabinets, baseboards, and door frames for small gnaw marks.
+
+If any of this sounds familiar, it's worth getting the exterior inspected before it becomes a bigger job. We offer a free inspection and quote to find out exactly where they're getting in.`,
+  },
+  {
+    id: "why-fall-matters",
+    title: "Why fall is the busiest season for rodent entry",
+    date: "September 2026",
+    excerpt: "As temperatures drop, mice and rats start actively looking for a way inside. Here's why now matters.",
+    body: `Rodents don't hibernate, and they don't handle cold well either. As outdoor temperatures drop in fall, mice and rats shift their search from food to shelter, and a house that's warm, dry, and full of hiding spots is exactly what they're looking for.
+
+This is why exclusion work done in late summer and early fall tends to prevent the most problems. Once the weather turns, gaps that were unused all summer suddenly become an active entry point, and by the time you hear scratching in the walls, they're usually already settled in.
+
+Sealing up the usual entry points before the weather turns is the most effective single thing you can do to avoid a winter infestation.`,
+  },
+  {
+    id: "chemicals-vs-sealing",
+    title: "Why we don't use bait or poison",
+    date: "September 2026",
+    excerpt: "Traps and chemicals treat the symptom. Sealing the entry points treats the cause.",
+    body: `Bait stations and poison can reduce a rodent population that's already inside, but they don't do anything to stop new rodents from getting in next week, next month, or next year. That's the core problem with chemical-only approaches: they're ongoing, and they never actually solve the underlying issue.
+
+Exclusion works differently. Instead of managing the population that gets in, we close off the ways they get in to begin with, using steel mesh, sealant, and flashing at every gap, vent, and utility penetration we find. Once those are closed, there's nothing left for a chemical approach to keep treating.
+
+It's also simply safer to not have poison sitting around a home with pets or kids. No chemicals, no contracts, seal them out, keep them out.`,
+  },
+];
+
 function StepDot({ index, active, done, label }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 8, flex: 1 }}>
@@ -133,7 +176,7 @@ function StepDot({ index, active, done, label }) {
   );
 }
 
-export default function PestSealSite() {
+function HomePage() {
   const [step, setStep] = useState(1); // 1 service, 2 cal.com embed, 3 confirmed
   const [service, setService] = useState(null); // 'inspection' | 'seal'
   const [propertyType, setPropertyType] = useState("residential");
@@ -187,6 +230,7 @@ export default function PestSealSite() {
           <nav style={{ display: "flex", alignItems: "center", gap: 22 }}>
             <a href="#how" style={{ fontSize: 14, fontWeight: 500, color: COLORS.inkSoft, textDecoration: "none" }} className="hidden sm:inline">How it works</a>
             <a href="#seal" style={{ fontSize: 14, fontWeight: 500, color: COLORS.inkSoft, textDecoration: "none" }} className="hidden sm:inline">What we seal</a>
+            <a href="#blog" style={{ fontSize: 14, fontWeight: 500, color: COLORS.inkSoft, textDecoration: "none" }} className="hidden sm:inline">Blog</a>
             <a
               href="tel:+12197435148"
               style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 14, fontWeight: 600, color: COLORS.ink, textDecoration: "none" }}
@@ -404,6 +448,44 @@ export default function PestSealSite() {
         </div>
       </section>
 
+      {/* BLOG */}
+      <section id="blog" style={{ maxWidth: 900, margin: "0 auto", padding: "56px 20px" }}>
+        <h2 style={{ fontFamily: "Fredoka, sans-serif", fontWeight: 600, fontSize: 28, marginBottom: 8 }}>From the blog</h2>
+        <p style={{ color: COLORS.inkSoft, marginBottom: 28, maxWidth: 480 }}>Tips and notes on keeping rodents out.</p>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+          {BLOG_POSTS.map((post) => (
+            <article
+              key={post.id}
+              style={{
+                background: "#fff",
+                border: `1px solid ${COLORS.stone}`,
+                borderRadius: 14,
+                padding: 20,
+              }}
+            >
+              <div style={{ fontSize: 12, color: COLORS.inkSoft, fontWeight: 600, marginBottom: 4 }}>{post.date}</div>
+              <h3 style={{ fontFamily: "Fredoka, sans-serif", fontWeight: 600, fontSize: 19, margin: "0 0 8px" }}>
+                <Link to={`/blog/${post.id}`} style={{ color: COLORS.ink, textDecoration: "none" }}>{post.title}</Link>
+              </h3>
+              <p style={{ fontSize: 14.5, color: COLORS.inkSoft, lineHeight: 1.6, margin: 0 }}>{post.excerpt}</p>
+              <Link
+                to={`/blog/${post.id}`}
+                style={{
+                  color: COLORS.sky1,
+                  fontWeight: 600,
+                  fontSize: 13.5,
+                  textDecoration: "none",
+                  display: "inline-block",
+                  marginTop: 12,
+                }}
+              >
+                Read more
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* BOOKING */}
       <section id="book" style={{ maxWidth: 720, margin: "0 auto", padding: "64px 20px" }}>
         <h2 style={{ fontFamily: "Fredoka, sans-serif", fontWeight: 600, fontSize: 28, marginBottom: 6, textAlign: "center" }}>Book your visit</h2>
@@ -558,5 +640,136 @@ export default function PestSealSite() {
         </div>
       </footer>
     </div>
+  );
+}
+
+// Small shared header/footer used on individual blog post pages, so they
+// don't need the full homepage markup but still feel like the same site.
+function MiniHeader() {
+  return (
+    <header style={{ borderBottom: `1px solid ${COLORS.stone}`, padding: "10px 20px" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <Link to="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", color: COLORS.ink }}>
+          <img src={LOGO_URI} alt="Pest Seal" style={{ width: 36, height: 36, objectFit: "contain" }} />
+          <span style={{ fontFamily: "Fredoka, sans-serif", fontWeight: 600, fontSize: 18 }}>Pest Seal</span>
+        </Link>
+        <a
+          href="/#book"
+          style={{
+            background: COLORS.ink,
+            color: "#fff",
+            borderRadius: 8,
+            padding: "8px 14px",
+            fontFamily: "Fredoka, sans-serif",
+            fontWeight: 600,
+            fontSize: 13,
+            textDecoration: "none",
+          }}
+        >
+          Book now
+        </a>
+      </div>
+    </header>
+  );
+}
+
+function MiniFooter() {
+  return (
+    <footer style={{ background: COLORS.ink, color: "#B9B6AC", padding: "28px 20px", marginTop: 40 }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", fontSize: 13, lineHeight: 2 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}><Phone size={13} /> (219) 743-5148</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}><Mail size={13} /> pestsealllc@gmail.com</div>
+        <div style={{ marginTop: 10, fontSize: 12, color: "#8B8880" }}>© {new Date().getFullYear()} Pest Seal. All rights reserved.</div>
+      </div>
+    </footer>
+  );
+}
+
+// Renders one blog post at its own URL (/blog/<slug>), with its own page
+// title and meta description set for search engines and link previews.
+function BlogPostPage() {
+  const { slug } = useParams();
+  const post = BLOG_POSTS.find((p) => p.id === slug);
+
+  useEffect(() => {
+    if (!post) return;
+    document.title = `${post.title} | Pest Seal`;
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
+    }
+    const prevContent = meta.getAttribute("content");
+    meta.setAttribute("content", post.excerpt);
+    return () => {
+      document.title = "Pest Seal | Rodent Exclusion & Mouse Prevention";
+      if (prevContent) meta.setAttribute("content", prevContent);
+    };
+  }, [post]);
+
+  if (!post) return <Navigate to="/" replace />;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: { "@type": "Organization", name: "Pest Seal" },
+    publisher: { "@type": "Organization", name: "Pest Seal" },
+  };
+
+  return (
+    <div style={{ fontFamily: "'Work Sans', sans-serif", background: COLORS.cream, color: COLORS.ink, minHeight: "100vh" }}>
+      <style>{FONT_IMPORT}</style>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <MiniHeader />
+      <article style={{ maxWidth: 700, margin: "0 auto", padding: "40px 20px 20px" }}>
+        <Link to="/#blog" style={{ fontSize: 13, color: COLORS.inkSoft, textDecoration: "none", fontWeight: 600 }}>&larr; Back to blog</Link>
+        <div style={{ fontSize: 13, color: COLORS.inkSoft, fontWeight: 600, marginTop: 18 }}>{post.date}</div>
+        <h1 style={{ fontFamily: "Fredoka, sans-serif", fontWeight: 600, fontSize: "clamp(26px, 4vw, 34px)", lineHeight: 1.2, margin: "6px 0 20px" }}>
+          {post.title}
+        </h1>
+        {post.body.split("\n\n").map((para, i) => (
+          <p key={i} style={{ fontSize: 16, color: COLORS.inkSoft, lineHeight: 1.7, margin: "0 0 16px" }}>
+            {para}
+          </p>
+        ))}
+        <div style={{ marginTop: 32, padding: 20, background: "#fff", border: `1px solid ${COLORS.stone}`, borderRadius: 14 }}>
+          <div style={{ fontFamily: "Fredoka, sans-serif", fontWeight: 600, fontSize: 16, marginBottom: 6 }}>Think you might have a rodent problem?</div>
+          <p style={{ fontSize: 14, color: COLORS.inkSoft, marginBottom: 14 }}>We offer a free inspection and quote to find out exactly where they're getting in.</p>
+          <a
+            href="/#book"
+            style={{
+              background: `linear-gradient(135deg, ${COLORS.amber2}, ${COLORS.amber1})`,
+              color: COLORS.ink,
+              borderRadius: 10,
+              padding: "11px 20px",
+              fontFamily: "Fredoka, sans-serif",
+              fontWeight: 600,
+              fontSize: 14,
+              textDecoration: "none",
+              display: "inline-block",
+            }}
+          >
+            Book a free inspection
+          </a>
+        </div>
+      </article>
+      <MiniFooter />
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
