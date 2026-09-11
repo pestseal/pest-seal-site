@@ -104,7 +104,9 @@ const ENTRY_POINTS = [
 */
 const BLOG_POSTS = [
   {
-    id: "dangers-of-mice-home-workplace",    title: "The Dangers of Mice in the Home or Workplace",    date: "September 2026",
+    id: "dangers-of-mice-home-workplace",
+    title: "The Dangers of Mice in the Home or Workplace",
+    date: "September 2026",
     excerpt: "Mice bring health risks, property damage, and stress the moment they slip inside. Sealing every entry point stops the problem at its source.",
     body: `The dangers of mice in the home or workplace start long before anyone spots a mouse. A single opening the size of a dime lets them slip past your defenses. Once inside, mice bring health risks, property damage, and a mess that spreads fast. Sealing every entry point is the only way to stop the problem at its source.
 
@@ -199,7 +201,9 @@ Pest Seal was built around a straightforward idea. Find every way rodents enter 
 That standard keeps homes and workplaces safer for everyone inside them. Families avoid chemicals near kids and pets. Businesses avoid the liability that comes with ongoing rodent treatments.
 
 A free inspection is the easiest first step toward solving the problem. A technician walks the exterior, identifies every risk point, and lays out a clear plan. From there, sealing the space becomes a one-time, lasting fix.`,
-  },    id: "signs-you-have-mice",
+  },
+  {
+    id: "signs-you-have-mice",
     title: "5 signs mice have already gotten in",
     date: "September 2026",
     excerpt: "Most homeowners don't see a mouse before they see the evidence. Here's what to look for.",
